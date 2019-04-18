@@ -14,6 +14,5 @@ telegram.on("text", async (message) => {
   const { chat: { id, title }, text, from: { first_name: firstName, last_name: lastName, username } } = message;
   const interfaceMessage = new InterfaceMessage({ title, text, username, firstName, lastName });
   const connection = new Connection(id, 'telegram');
-  console.log(interfaceMessage);
   receiveMessage(connection, interfaceMessage);
 });

@@ -27,7 +27,7 @@ export const sendSlackMessage = ({ id }, { text, firstName }) => {
     // `res` contains information about the posted message
     Logger.info(`Message sent: ${ts}`);
   })
-  .catch((a,b)=>{console.log(a);console.log(b);});
+  .catch(e=>Logger.warn(e));
 }
 
 slackEvents.on('message', async (event) => {

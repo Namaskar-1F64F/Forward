@@ -1,4 +1,4 @@
-import Logger from '../util/Logger';
+import Logger from '../util/logger';
 import { getSubscription, addSubscription, removeSubscription } from './database';
 
 export const add = async (telegramId, slackId) => {
